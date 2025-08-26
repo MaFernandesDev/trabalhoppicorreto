@@ -1,0 +1,215 @@
+/* --- Variáveis de Cores e Fontes --- */
+:root {
+    --color-primary: #FFFFFF; /* Branco */
+    --color-secondary: #000000; /* Preto */
+    --color-accent: #C40000; /* Vermelho */
+    --font-family: sans-serif; /* Fonte padrão do sistema */
+}
+
+/* --- Reset Básico e Estilos Gerais --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Estilos do Cabeçalho e Navegação --- */
+.header {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-accent);
+}
+
+/* --- Componentes Gerais --- */
+.section {
+    padding: 6rem 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    color: var(--color-secondary);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-accent);
+    margin: 1rem auto 0;
+}
+
+.footer {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    text-align: center;
+    padding: 1.5rem 2rem;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+/* --- Estilos da Página de Detalhes do Curso --- */
+.course-details {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-details .section-title {
+    margin-bottom: 2rem;
+}
+
+.course-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+}
+
+.course-info p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0;
+}
+
+.course-info strong {
+    color: var(--color-secondary);
+}
+
+.details-content h3 {
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.details-content ul {
+    list-style-type: '• ';
+    padding-left: 1.5rem;
+}
+
+.details-content ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* --- Estilos do Formulário de Compra de Vagas --- */
+.purchase-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.form-group select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.total-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.total-price span {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+}
+
+.btn-buy {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: #A00000;
+    transform: translateY(-2px);
+}

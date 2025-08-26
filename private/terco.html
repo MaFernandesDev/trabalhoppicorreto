@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponto e Afeto - Detalhes do Curso de Terços</title>
+    <link rel="stylesheet" href="detalhes.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">Ponto e Afeto</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/home.html">Home</a></li>
+                    <li><a href="/home.html">Cursos</a></li>
+                    <li><a href="/sobre.html">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="section course-details">
+            <h2 class="section-title">Curso de Terços</h2>
+            <div class="course-info">
+                <p><strong>Tutora:</strong> Maria Eduarda S. Fernandes</p>
+                <p><strong>Nível:</strong> Básico</p>
+                <p><strong>Vagas Disponíveis:</strong> 12</p>
+            </div>
+            <div class="details-content">
+                <h3>O que você irá aprender:</h3>
+                <ul>
+                    <li>Técnicas de montagem de terços do zero.</li>
+                    <li>Escolha de materiais e significado das contas.</li>
+                    <li>Como criar terços personalizados para devoção e venda.</li>
+                </ul>
+            </div>
+            
+            <div class="purchase-form">
+                <div class="form-group">
+                    <label for="spots">Vagas:</label>
+                    <select name="spots" id="spots-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <p class="total-price">Valor Total: R$ <span>250,00</span></p>
+                <button id="buy-button" class="btn-buy">Matricular-se</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Ponto e Afeto. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Valor do curso de Terços
+        const coursePrice = 250; 
+        
+        const spotsSelect = document.getElementById('spots-select');
+        const totalPriceSpan = document.querySelector('.total-price span');
+        
+        spotsSelect.addEventListener('change', () => {
+          const selectedSpots = spotsSelect.value;
+          const totalValue = selectedSpots * coursePrice;
+          totalPriceSpan.textContent = totalValue.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+          });
+        });
+    </script>
+</body>
+</html>

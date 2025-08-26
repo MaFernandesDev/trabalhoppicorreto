@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponto e Afeto - Detalhes do Curso de Pinturas</title>
+    <link rel="stylesheet" href="detalhes.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">Ponto e Afeto</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/home.html">Home</a></li>
+                    <li><a href="/home.html">Cursos</a></li>
+                    <li><a href="/sobre.html">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="section course-details">
+            <h2 class="section-title">Curso de Pinturas Religiosas</h2>
+            <div class="course-info">
+                <p><strong>Tutora:</strong> Maria Eduarda S. Fernandes</p>
+                <p><strong>Nível:</strong> Avançado</p>
+                <p><strong>Vagas Disponíveis:</strong> 5</p>
+            </div>
+            <div class="details-content">
+                <h3>O que você irá aprender:</h3>
+                <ul>
+                    <li>Fundamentos da pintura de ícones e figuras sagradas.</li>
+                    <li>Técnicas de sombreamento, luz e profundidade.</li>
+                    <li>Criação de obras de arte com temática religiosa, do esboço ao acabamento.</li>
+                </ul>
+            </div>
+            
+            <div class="purchase-form">
+                <div class="form-group">
+                    <label for="spots">Vagas:</label>
+                    <select name="spots" id="spots-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <p class="total-price">Valor Total: R$ <span>1.200,00</span></p>
+                <button id="buy-button" class="btn-buy">Comprar Vaga(s)</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Ponto e Afeto. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Valor do curso de Pinturas Religiosas
+        const coursePrice = 1200; 
+        
+        const spotsSelect = document.getElementById('spots-select');
+        const totalPriceSpan = document.querySelector('.total-price span');
+        
+        spotsSelect.addEventListener('change', () => {
+          const selectedSpots = spotsSelect.value;
+          const totalValue = selectedSpots * coursePrice;
+          totalPriceSpan.textContent = totalValue.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+          });
+        });
+    </script>
+</body>
+</html>
